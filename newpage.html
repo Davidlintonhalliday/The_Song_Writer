@@ -82,6 +82,31 @@
       © 2025 The Song Writer — David Linton-Halliday
     </footer>
   </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top" 
+          style="position:fixed;bottom:30px;right:30px;display:none;
+                 background:var(--accent);color:#071021;border:none;
+                 padding:12px 16px;border-radius:50%;font-size:16px;
+                 cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.5);">
+    ↑
+  </button>
+
+  <script>
+    // Back to Top Button functionality
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { // Show after scrolling 300px
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
-
