@@ -21,41 +21,33 @@
     .hero h1{font-size:40px;margin:0 0 12px}
     .hero p{color:var(--muted);margin:0 0 18px}
     .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,8,23,0.6);backdrop-filter: blur(6px)}
+
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
     .feature{padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
     .feature h4{margin:0 0 6px}
 
-    .song-grid{display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:12px;}
-    .song-card {
-      background: rgba(255,255,255,0.05);
-      padding: 12px;
-      border-radius: 12px;
-      text-align: center;
-      width:300px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      animation: fadeInUp 0.8s forwards;
-    }
-    .song-card:nth-child(1){animation-delay:0.1s;}
-    .song-card:nth-child(2){animation-delay:0.2s;}
-    .song-card:nth-child(3){animation-delay:0.3s;}
-    .song-card:hover{transform: translateY(-6px); box-shadow: 0 12px 30px rgba(255,183,3,0.5);}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:768px){.song-card{width:90%; margin:0 auto;} .song-card iframe{height:200px;}}
-    @media(max-width:480px){.song-card iframe{height:180px;}}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:12px}
+    .gallery img{width:100%;height:110px;object-fit:cover;border-radius:8px}
 
-    .contact-form input,.contact-form textarea{
-      width:100%; padding:10px; margin-bottom:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#e6eef6;
-    }
-    .contact-form button{
-      background: var(--accent); color:#071021; padding:8px 14px; border-radius:10px; font-weight:700; border:none; cursor:pointer;
-    }
-    .contact-form button:hover{background:#ff9f1c;}
+    .contact-row{display:flex;gap:18px;margin-top:18px}
+    .contact-form{flex:1}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    textarea{min-height:110px}
     footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
-    @media(max-width:880px){.hero{grid-template-columns:1fr;} nav{display:none} .mobile-nav{display:flex}}
-    .mobile-toggle{display:none} @media(max-width:880px){.mobile-toggle{display:inline-flex;align-items:center;gap:8px;cursor:pointer}}
+
+    @media(max-width:880px){.hero{grid-template-columns:1fr;} nav{display:none} .mobile-nav{display:flex} }
+    .mobile-toggle{display:none} 
+    @media(max-width:880px){.mobile-toggle{display:inline-flex;align-items:center;gap:8px;cursor:pointer}}
+
+    .fade-in{animation:fadeIn .9s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    .song-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:18px;}
+    .song-card{background:rgba(255,255,255,0.05);padding:12px;border-radius:10px;text-align:center;}
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -66,22 +58,20 @@
           <div style="font-size:13px;color:var(--muted)">Musician • Songwriter • Podcaster</div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <nav>
-          <a href="#about">About</a>
-          <a href="#works">Works</a>
-          <a href="#songs">My Songs</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a class="btn" href="#contact">Contact Me</a>
-        <div class="mobile-toggle" onclick="toggleNav()">☰</div>
-      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#songs">My Songs</a>
+        <a href="#friends">Friends</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Contact Me</a>
     </header>
 
     <main>
       <section class="hero">
         <div>
-          <div class="card">
+          <div class="card fade-in">
             <h1>Welcome — I craft songs and stories from the heart.</h1>
             <p>Explore my music, writing, and podcast creations. Each project tells a story and brings melodies to life.</p>
             <div class="features">
@@ -93,82 +83,67 @@
         </div>
       </section>
 
-      <section id="about" style="margin-top:22px">
+      <section id="about">
         <div class="card">
           <h2>About</h2>
           <p style="color:var(--muted)">Songwriting is my way of connecting with people, capturing emotions, and telling stories that resonate. I love blending melodies with words that leave a lasting impression.</p>
         </div>
       </section>
 
-      <section id="works" style="margin-top:22px">
+      <section id="works">
         <div class="card">
           <h2>Selected Works</h2>
-          <p style="color:var(--muted)">A few highlights from my recordings, writings, and podcasts.</p>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px">
-            <div class="card"><h4>Single — "Not yet started"</h4><p style="color:var(--muted);margin:6px 0">Release info, streaming links.</p></div>
-            <div class="card"><h4>Novel — " the unfinished Chronicles"</h4><p style="color:var(--muted);margin:6px 0">Progress: chapters available on request.</p></div>
-            <div class="card"><h4>Podcast — " Starting Jan.2026"</h4><p style="color:var(--muted);margin:6px 0">Latest episodes and show notes.</p></div>
+          <div class="song-grid">
+            <div class="song-card"><h4>Single — "Stand For Ukraine"</h4><p style="color:var(--muted);margin:6px 0">Release info, streaming links.</p></div>
+            <div class="song-card"><h4>Novel — "Somewhere to Hide"</h4><p style="color:var(--muted);margin:6px 0">Progress: chapters available on request.</p></div>
+            <div class="song-card"><h4>Podcast — "Living in NSW Rural Towns"</h4><p style="color:var(--muted);margin:6px 0">Latest episodes and show notes.</p></div>
           </div>
         </div>
       </section>
 
-      <section id="songs" style="margin-top:22px">
+      <section id="songs">
         <div class="card">
           <h2>My Songs</h2>
           <div class="song-grid">
             <div class="song-card">
               <h3>Cajun Moon</h3>
-              <iframe width="300" height="170" 
-                src="https://www.youtube.com/embed/wrg6WWQPSHY?modestbranding=1" 
-                title="Cajun Moon" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="song-card">
-              <h3>Foxes at the Window</h3>
-              <iframe width="300" height="170" 
-                src="https://www.youtube.com/embed/ScMzIvxBSi4?modestbranding=1" 
-                title="Foxes at the Window" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="song-card">
-              <h3>The Song Writer’s Road</h3>
-              <iframe width="300" height="170" 
-                src="https://www.youtube.com/embed/9bZkp7q19f0?modestbranding=1" 
-                title="The Song Writer’s Road" frameborder="0" allowfullscreen></iframe>
+              <iframe width="300" height="170" src="https://www.youtube.com/embed/wrg6WWQPSHY" title="Cajun Moon" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" style="margin-top:22px">
+      <section id="friends" style="margin-top:22px">
+        <div class="card">
+          <h2>Friends’ Channels</h2>
+          <div class="song-grid">
+            <div class="song-card">
+              <img src="https://yt3.googleusercontent.com/ytc/AIdro_lS4NMc5OYzMjViIoXGLmB2mQQoEbtHZ7WRzjNLD6aXHA=s176-c-k-c0x00ffffff-no-rj" 
+                   alt="ZenBowls YouTube Channel" 
+                   style="width:150px;height:150px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,0.5);margin-bottom:10px;">
+              <h3 style="margin:6px 0;">ZenBowls</h3>
+              <p style="color:var(--muted);margin:6px 0;">Relaxing vibes and thoughtful soundscapes from my friend’s creative channel.</p>
+              <a href="https://www.youtube.com/@ZenBowls" target="_blank" 
+                 style="display:inline-block;background:var(--accent);color:#071021;
+                 padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700;">Visit Channel</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
         <div class="card">
           <h2>Contact Me</h2>
-          <form class="contact-form">
-            <label>Name</label>
-            <input type="text" placeholder="Your name">
-            <label>Email</label>
-            <input type="email" placeholder="Your email">
-            <label>Message</label>
-            <textarea placeholder="Write your message here..."></textarea>
-            <button type="submit" class="btn">Send</button>
-          </form>
-          <div style="margin-top:16px; color:var(--muted); font-size:14px;">
-            <p>Email: <a href="mailto:davidlintonhalliday@gmail.com" style="color:var(--accent); text-decoration:none;">davidlintonhalliday@gmail.com</a></p>
-            <p>Phone: <span style="color:var(--accent)">+61 0409989768</span></p>
-            <p>YouTube: <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank" style="color:var(--accent); text-decoration:none;">Visit my channel</a></p>
-          </div>
+          <p>Email: <a href="mailto:davidlintonhalliday@gmail.com" style="color:var(--accent);">davidlintonhalliday@gmail.com</a></p>
+          <p>Phone: <a href="tel:+61409989768" style="color:var(--accent);">+61 0409 989 768</a></p>
+          <p>YouTube: <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank" style="color:var(--accent);">Visit My Channel</a></p>
         </div>
       </section>
-
     </main>
 
     <footer>
       © 2025 The Song Writer — David Linton-Halliday
-      <br>
-      <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank" style="color:var(--accent); text-decoration:none;">Visit my YouTube Channel</a>
     </footer>
   </div>
 </body>
 </html>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="blog.html">Blog</a>
-</nav>
