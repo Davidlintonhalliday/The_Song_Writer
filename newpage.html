@@ -6,23 +6,165 @@
   <title>The Song Writer — More</title>
   <meta name="description" content="The Song Writer — songs, stories, podcasts and more." />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#ffb703;--muted:#9aa4b2;--glass: rgba(255,255,255,0.03)}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;background-size: cover;color:#e6eef6;}
-    .container{max-width:1100px;margin:0 auto;padding:28px;background:rgba(15,23,36,0.85);border-radius:14px;}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .btn{background:var(--accent);color:#071021;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,8,23,0.6);backdrop-filter: blur(6px)}
-    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
-    .menu-card{text-align:left;padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
-    .menu-card h3{margin:0 0 8px;color:#fff}
-    .menu-card p{color:var(--muted);margin:0}
-    .content-block{margin-top:12px;text-align:center}
-    .content-block iframe,.content-block video{width:100%;max-width:420px;height:220px;border-radius:8px;margin-top:8px}
-    footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #ffb703;
+      --muted: #9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      line-height: 1.5;
+      background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #e6eef6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px;
+      background: rgba(15, 23, 36, 0.85);
+      border-radius: 14px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #ff6b6b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #071021;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: #071021;
+      padding: 8px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(2,8,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .menu-card {
+      text-align: left;
+      padding: 18px;
+      border-radius: 12px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .menu-card h3 {
+      margin: 0 0 8px;
+      color: #fff;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .content-block {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .content-block iframe, .content-block video {
+      width: 100%;
+      max-width: 420px;
+      height: 220px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .video-item {
+      text-align: center;
+      background: var(--glass);
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .video-item iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .video-item h4 {
+      margin: 10px 0 6px;
+      color: #fff;
+      font-size: 1.05em;
+      font-weight: 700;
+    }
+
+    .video-item p {
+      color: var(--muted);
+      font-size: 0.9em;
+      margin: 0;
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -60,25 +202,54 @@
             <iframe src="https://www.youtube.com/embed/wrg6WWQPSHY" title="Where the Soldiers Lay" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+
         <div id="menu2" class="menu-card">
           <h3>The Library of Alistair Mackenzie</h3>
           <p>Alistair Mackenzie owns the world’s largest private library — a legacy kept through four centuries. Knowledge hums like a living thing.</p>
         </div>
+
         <div id="menu3" class="menu-card">
           <h3>Podcasts</h3>
           <div class="content-block">
             <iframe src="https://www.youtube.com/embed/UCyo8kGE2_sHoHtiWxmBZ3JQ" title="Podcast Placeholder" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+
         <div id="menu4" class="menu-card">
           <h3>Videos</h3>
-          <div class="content-block">
-            <video controls>
-              <source src="sample-video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <div class="video-grid">
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/CKATUTmXnIk?si=KEWNaV1MeHMaqRqh"
+                title="Where the Soldiers Lay"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+              <h4>Where the Soldiers Lay</h4>
+              <p>Written by David Linton-Halliday — a haunting reflection on love and loss beneath the green hills.</p>
+            </div>
+
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/wrg6WWQPSHY"
+                title="The River Road"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+              <h4>The River Road</h4>
+              <p>A soulful ballad capturing the quiet ache of memory and time.</p>
+            </div>
+
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/UCyo8kGE2_sHoHtiWxmBZ3JQ"
+                title="Behind the Music — Podcast Excerpt"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+              <h4>Behind the Music — Podcast Excerpt</h4>
+              <p>David discusses the inspiration and stories behind his songwriting process.</p>
+            </div>
           </div>
         </div>
+
         <div id="menu5" class="menu-card">
           <h3>Miscellaneous</h3>
           <p style="color:var(--muted)">Poems, drafts, and creative experiments.</p>
