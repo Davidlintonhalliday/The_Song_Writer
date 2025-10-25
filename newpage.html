@@ -1,1 +1,81 @@
+  <main>
+      <section class="card">
+        <h1>Let Your Imagination Flow</h1>
+        <p>This template page now has smooth scrolling navigation for each menu section.</p>
+        <p>"Real knowledge is to know the extent of one's ignorance". .</p>
+      </section>
 
+      <section class="menu-grid">
+
+        <!-- Menu 1 -->
+        <div id="menu1" class="menu-card">
+          <h3>Menu 1 — Songs</h3>
+          <p>Place your song embeds here</p>
+          <div class="content-block">
+            <iframe src="https://www.youtube.com/embed/wrg6WWQPSHY" title="Sample Song" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Menu 2 -->
+        <div id="menu2" class="menu-card">
+          <h3>Menu 2 — Stories</h3>
+          <p>Alistair Mackenzie is the owner of the world's largest and oldest private library and museum, a legacy that has been in his family for over four hundred years.
+
+
+</p>
+          <div class="content-block">
+            <p style="color:var(--muted)">."</p>
+          </div>
+        </div>
+
+        <!-- Menu 3 -->
+        <div id="menu3" class="menu-card">
+          <h3>Menu 3 — Podcasts</h3>
+          <p>Place your podcast episodes or links here</p>
+          <div class="content-block">
+            <iframe src="https://www.youtube.com/embed/UCyo8kGE2_sHoHtiWxmBZ3JQ" title="Podcast Placeholder" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Menu 4 -->
+        <div id="menu4" class="menu-card">
+          <h3>Menu 4 — Videos</h3>
+          <p>Future video content or tutorials</p>
+          <div class="content-block">
+            <video controls>
+              <source src="sample-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Menu 5 -->
+        <div id="menu5" class="menu-card">
+          <h3>Menu 5 — Misc</h3>
+          <p>Other creative content goes here</p>
+          <div class="content-block">
+            <p style="color:var(--muted)">Text, images, or anything you want to showcase.</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      © 2025 The Song Writer — David Linton-Halliday
+    </footer>
+  </div>
+
+  <!-- Optional: Smooth scroll JS fallback -->
+  <script>
+    // If browser doesn't support CSS scroll-behavior, this JS smooth scroll works
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
