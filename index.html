@@ -3,55 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Song Writer — More</title>
-  <meta name="description" content="The Song Writer — songs, stories, podcasts and more." />
+  <title>The Song Writer</title>
+  <meta name="description" content="The Song Writer — musician, songwriter, podcaster." />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#ffb703;--muted:#9aa4b2;--glass: rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    html { scroll-behavior: smooth; }
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;
-         background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-         background-size: cover; color:#e6eef6;}
-    .container{max-width:1100px;margin:0 auto;padding:28px;background:rgba(15,23,36,0.85);border-radius:14px;}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .btn{background:var(--accent);color:#071021;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,8,23,0.6);backdrop-filter: blur(6px)}
-    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
-    .menu-card{text-align:left;padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
-    .menu-card h3{margin:0 0 8px;color:#fff}
-    .menu-card p{color:var(--muted);margin:0}
-
-    .content-block{margin-top:12px;text-align:center}
-    .content-block iframe,.content-block video{width:100%;max-width:420px;height:220px;border-radius:8px;margin-top:8px}
-
-    footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
-
-    /* Back to Top button */
-    #backToTop {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      background: var(--accent);
-      color: #071021;
-      padding: 10px 14px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-      z-index: 999;
+    :root {
+      --bg:#0f1724; --card:#0b1220; --accent:#ffb703; --muted:#9aa4b2; --glass: rgba(255,255,255,0.03)
     }
-    #backToTop:hover { transform: scale(1.08); }
-
-    @media(max-width:880px){.hero{grid-template-columns:1fr;} nav{display:none} .mobile-toggle{display:flex}}
-    .fade-in{animation:fadeIn .9s ease both}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      line-height:1.5; background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover; color:#e6eef6;
+    }
+    .container { max-width:1100px; margin:0 auto; padding:28px; background:rgba(15,23,36,0.85); border-radius:14px; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+    .brand { display:flex; gap:12px; align-items:center; }
+    .logo { width:52px; height:52px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#ff6b6b); display:flex; align-items:center; justify-content:center; font-weight:700; color:#071021; }
+    nav { display:flex; gap:18px; align-items:center; }
+    nav a { color:var(--muted); text-decoration:none; font-weight:600; }
+    .btn { background:var(--accent); color:#071021; padding:8px 14px; border-radius:10px; text-decoration:none; font-weight:700; }
+    .card { background:var(--card); padding:18px; border-radius:14px; box-shadow:0 6px 20px rgba(2,8,23,0.6); backdrop-filter: blur(6px); }
+    .song-grid { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:18px; }
+    .song-card { background:rgba(255,255,255,0.05); padding:12px; border-radius:10px; text-align:center; }
   </style>
 </head>
 <body>
@@ -64,107 +37,73 @@
           <div style="font-size:13px;color:var(--muted)">Musician • Songwriter • Podcaster</div>
         </div>
       </div>
-
-      <!-- Main nav matches index style; Home link included -->
       <nav>
-        <a href="index.html">Home</a>
-        <a href="#menu1">Songs</a>
-        <a href="#menu2">Stories</a>
-        <a href="#menu3">Podcasts</a>
-        <a href="#menu4">Videos</a>
-        <a href="#menu5">Misc</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#songs">My Songs</a>
+        <a href="#friends">Friends</a>
+        <a href="#contact">Contact</a>
+        <a href="newpage.html">More</a>
       </nav>
-
-      <a class="btn" href="index.html#contact">Contact Me</a>
+      <a class="btn" href="#contact">Contact Me</a>
     </header>
 
     <main>
-      <section class="card fade-in">
-        <h1>More — Songs, Stories & Things</h1>
-        <p style="color:var(--muted)">This page holds extra material: songs, excerpts, podcasts and videos. Click a menu item to jump to its section.</p>
+      <section class="card">
+        <h1>Welcome — I craft songs and stories from the heart.</h1>
+        <p>Explore my music, writing, and podcast creations. Each project tells a story and brings melodies to life.</p>
       </section>
 
-      <section class="menu-grid">
+      <section id="about" class="card" style="margin-top:18px">
+        <h2>About</h2>
+        <p style="color:var(--muted)">Songwriting is my way of connecting with people, capturing emotions, and telling stories that resonate. I love blending melodies with words that leave a lasting impression.</p>
+      </section>
 
-        <!-- Menu 1: Songs -->
-        <div id="menu1" class="menu-card">
-          <h3>Where the Soldiers Lay</h3>
-          <p>Under the green hills where the soldiers lay, she stood by the river, remembering those who never came home. A mournful, poetic song.</p>
-          <div class="content-block">
-            <!-- replace the video id with your real one when ready -->
-            <iframe src="https://www.youtube.com/embed/wrg6WWQPSHY" title="Where the Soldiers Lay" frameborder="0" allowfullscreen></iframe>
+      <section id="works" class="card" style="margin-top:18px">
+        <h2>Selected Works</h2>
+        <div class="song-grid">
+          <div class="song-card"><h4>Novel - "The unfinished chronicles"</h4><p style="color:var(--muted);margin:6px 0">Release info, streaming links.</p></div>
+          <div class="song-card"><h4>Novel — "Just another Shitty Day In Paradise"</h4><p style="color:var(--muted);margin:6px 0">Progress: chapters available on request.</p></div>
+          <div class="song-card"><h4>Podcast — "The unexpected"</h4><p style="color:var(--muted);margin:6px 0">Latest episodes and show notes.</p></div>
+        </div>
+      </section>
+
+      <section id="songs" class="card" style="margin-top:18px">
+        <h2>My Songs</h2>
+        <div class="song-grid">
+          <div class="song-card">
+            <h3>Cajun Moon</h3>
+            <iframe width="300" height="170" src="https://www.youtube.com/embed/wrg6WWQPSHY?modestbranding=1" title="Cajun Moon" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="song-card">
+            <h3>Foxes at the Window</h3>
+            <iframe width="300" height="170" src="https://www.youtube.com/embed/ScMzIvxBSi4?modestbranding=1" title="Foxes at the Window" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+      </section>
 
-        <!-- Menu 2: Stories -->
-        <div id="menu2" class="menu-card">
-          <h3>The Library of Alistair Mackenzie</h3>
-          <p>Alistair Mackenzie owns the world’s largest and oldest private library — a legacy kept through four centuries of whispered secrets and lost manuscripts. Behind the mahogany doors, knowledge hums like a living thing, waiting for one curious soul to open the right book.</p>
-          <div class="content-block">
-            <p style="color:var(--muted)"><em>Excerpt from the upcoming novel <strong>Somewhere to Hide</strong>.</em></p>
+      <section id="friends" class="card" style="margin-top:18px">
+        <h2>Friends’ Channels</h2>
+        <div class="song-grid">
+          <div class="song-card">
+            <img src="https://yt3.googleusercontent.com/ytc/AIdro_lS4NMc5OYzMjViIoXGLmB2mQQoEbtHZ7WRzjNLD6aXHA=s176-c-k-c0x00ffffff-no-rj" alt="ZenBowls Channel" style="width:150px;height:150px;border-radius:12px;margin-bottom:10px;">
+            <h3>ZenBowls</h3>
+            <p style="color:var(--muted);margin:6px 0;">Relaxing vibes and soundscapes.</p>
+            <a href="https://www.youtube.com/@ZenBowls" target="_blank" style="display:inline-block;background:var(--accent);color:#071021;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700;">Visit Channel</a>
           </div>
         </div>
+      </section>
 
-        <!-- Menu 3: Podcasts -->
-        <div id="menu3" class="menu-card">
-          <h3>Podcasts</h3>
-          <p>Conversations about songwriting, creativity, and life in rural NSW — episodes and highlights coming here.</p>
-          <div class="content-block">
-            <!-- placeholder embed; replace with your podcast/video embed -->
-            <iframe src="https://www.youtube.com/embed/UCyo8kGE2_sHoHtiWxmBZ3JQ" title="Podcast Placeholder" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- Menu 4: Videos -->
-        <div id="menu4" class="menu-card">
-          <h3>Videos</h3>
-          <p>Performance clips, tutorials and studio footage.</p>
-          <div class="content-block">
-            <video controls>
-              <source src="sample-video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
-        <!-- Menu 5: Misc -->
-        <div id="menu5" class="menu-card">
-          <h3>Miscellaneous</h3>
-          <p>Poems, drafts and creative experiments that don’t fit anywhere else.</p>
-          <div class="content-block">
-            <p style="color:var(--muted)">Text, images, or whatever you want to showcase — edit this later.</p>
-          </div>
-        </div>
-
+      <section id="contact" class="card" style="margin-top:18px">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:davidlintonhalliday@gmail.com" style="color:var(--accent);">davidlintonhalliday@gmail.com</a></p>
+        <p>YouTube: <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank" style="color:var(--accent);">Visit My Channel</a></p>
       </section>
     </main>
 
-    <footer>
+    <footer style="margin-top:28px">
       © 2025 The Song Writer — David Linton-Halliday
     </footer>
   </div>
-
-  <!-- Back to Top -->
-  <button id="backToTop" title="Back to top">↑</button>
-
-  <script>
-    // smooth scroll fallback for nav anchors
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e){
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    // Back to Top button show/hide & action
-    const backBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backBtn.style.display = (window.scrollY > 300) ? 'block' : 'none';
-    });
-    backBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
 </body>
 </html>
