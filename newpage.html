@@ -3,35 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Song Writer — New Page</title>
-  <meta name="description" content="The Song Writer — musician, songwriter, podcaster." />
+  <title>The Song Writer — More</title>
+  <meta name="description" content="The Song Writer — songs, stories, podcasts and more." />
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--accent:#ffb703;--muted:#9aa4b2;--glass: rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed; background-size: cover; color:#e6eef6;}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;background-size: cover;color:#e6eef6;}
     .container{max-width:1100px;margin:0 auto;padding:28px;background:rgba(15,23,36,0.85);border-radius:14px;}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0; flex-wrap:wrap;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;gap:12px;align-items:center}
     .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021}
-    nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    nav{display:flex;gap:18px;align-items:center}
     nav a{color:var(--muted);text-decoration:none;font-weight:600}
     .btn{background:var(--accent);color:#071021;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-    .return-btn{display:inline-block;background:#000;color:#fff;padding:12px 20px;border-radius:12px;font-weight:700;text-decoration:none;margin-bottom:18px;text-align:center;}
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,8,23,0.6);backdrop-filter: blur(6px);margin-bottom:18px;}
-    .song-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:18px;}
-    .song-card{background:rgba(255,255,255,0.05);padding:12px;border-radius:10px;text-align:center;}
-    .fade-in{animation:fadeIn .9s ease both}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,8,23,0.6);backdrop-filter: blur(6px)}
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .menu-card{text-align:left;padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+    .menu-card h3{margin:0 0 8px;color:#fff}
+    .menu-card p{color:var(--muted);margin:0}
+    .content-block{margin-top:12px;text-align:center}
+    .content-block iframe,.content-block video{width:100%;max-width:420px;height:220px;border-radius:8px;margin-top:8px}
     footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
-    @media(max-width:880px){nav{flex-direction:column;gap:10px;}}
   </style>
 </head>
 <body>
   <div class="container">
-
-    <!-- Return Home Button -->
-    <a href="index.html" class="return-btn">← Return to Main Page</a>
-
     <header>
       <div class="brand">
         <div class="logo">TS</div>
@@ -42,62 +37,52 @@
       </div>
       <nav>
         <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#songs">My Songs</a>
-        <a href="#friends">Friends</a>
-        <a href="newpage.html">New Page</a>
+        <a href="#menu1">Songs</a>
+        <a href="#menu2">Stories</a>
+        <a href="#menu3">Podcasts</a>
+        <a href="#menu4">Videos</a>
+        <a href="#menu5">Misc</a>
       </nav>
       <a class="btn" href="index.html#contact">Contact Me</a>
     </header>
 
     <main>
-      <section id="about" class="card fade-in">
-        <h2>About This Page</h2>
-        <p style="color:var(--muted)">This is a dedicated page where you can post new content — songs, stories, podcasts, videos, or anything else. You can update it anytime without changing the main page.</p>
+      <section class="card">
+        <h1>More — Songs, Stories & Things</h1>
+        <p style="color:var(--muted)">This page holds extra material: songs, excerpts, podcasts and videos. Click a menu item to jump to its section.</p>
       </section>
 
-      <section id="works" class="card fade-in">
-        <h2>Selected Works (Placeholder)</h2>
-        <div class="song-grid">
-          <div class="song-card"><h4>Work 1 — New Song</h4><p style="color:var(--muted)">Your description here.</p></div>
-          <div class="song-card"><h4>Work 2 — New Story</h4><p style="color:var(--muted)">Your description here.</p></div>
-          <div class="song-card"><h4>Work 3 — New Podcast</h4><p style="color:var(--muted)">Your description here.</p></div>
-        </div>
-      </section>
-
-      <section id="songs" class="card fade-in">
-        <h2>New Songs</h2>
-        <div class="song-grid">
-          <div class="song-card">
-            <h3>Sample Song</h3>
-            <iframe width="300" height="170" 
-              src="https://www.youtube.com/embed/wrg6WWQPSHY" 
-              title="Sample Song" frameborder="0" allowfullscreen></iframe>
+      <section class="menu-grid">
+        <div id="menu1" class="menu-card">
+          <h3>Where the Soldiers Lay</h3>
+          <p>Under the green hills where the soldiers lay, she stood by the river, remembering those who never came home.</p>
+          <div class="content-block">
+            <iframe src="https://www.youtube.com/embed/wrg6WWQPSHY" title="Where the Soldiers Lay" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
-      </section>
-
-      <section id="friends" class="card fade-in">
-        <h2>Friends’ Channels</h2>
-        <div class="song-grid">
-          <div class="song-card">
-            <img src="https://yt3.googleusercontent.com/ytc/AIdro_lS4NMc5OYzMjViIoXGLmB2mQQoEbtHZ7WRzjNLD6aXHA=s176-c-k-c0x00ffffff-no-rj" 
-                 alt="ZenBowls YouTube Channel" 
-                 style="width:150px;height:150px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,0.5);margin-bottom:10px;">
-            <h3 style="margin:6px 0;">ZenBowls</h3>
-            <p style="color:var(--muted);margin:6px 0;">Relaxing vibes and thoughtful soundscapes from my friend’s channel.</p>
-            <a href="https://www.youtube.com/@ZenBowls" target="_blank" 
-               style="display:inline-block;background:var(--accent);color:#071021;
-               padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700;">Visit Channel</a>
+        <div id="menu2" class="menu-card">
+          <h3>The Library of Alistair Mackenzie</h3>
+          <p>Alistair Mackenzie owns the world’s largest private library — a legacy kept through four centuries. Knowledge hums like a living thing.</p>
+        </div>
+        <div id="menu3" class="menu-card">
+          <h3>Podcasts</h3>
+          <div class="content-block">
+            <iframe src="https://www.youtube.com/embed/UCyo8kGE2_sHoHtiWxmBZ3JQ" title="Podcast Placeholder" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
-      </section>
-
-      <section id="contact" class="card fade-in">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:davidlintonhalliday@gmail.com" style="color:var(--accent);">davidlintonhalliday@gmail.com</a></p>
-        <p>YouTube: <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank" style="color:var(--accent);">Visit My Channel</a></p>
+        <div id="menu4" class="menu-card">
+          <h3>Videos</h3>
+          <div class="content-block">
+            <video controls>
+              <source src="sample-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div id="menu5" class="menu-card">
+          <h3>Miscellaneous</h3>
+          <p style="color:var(--muted)">Poems, drafts, and creative experiments.</p>
+        </div>
       </section>
     </main>
 
