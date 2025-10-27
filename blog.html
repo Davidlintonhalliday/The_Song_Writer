@@ -1,45 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog — The Song Writer</title>
+<meta name="description" content="Behind-the-scenes stories and songwriting reflections by David Linton-Halliday.">
+<link rel="canonical" href="https://songwriters.space/blog.html"></head>
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </header>
-
+  <!-- same header -->
   <main>
-    <h2>All Posts</h2>
-    <div id="posts-container"></div>
+    <section>
+      <h1>Blog</h1>
+      <article>
+        <h2>How I wrote “Incognito”</h2>
+        <p>Behind the scenes of a song born from betrayal and freedom.</p>
+      </article>
+      <p><a class="btn" href="index.html">← Back to Home</a></p>
+    </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
-
-  <script>
-    fetch('posts.json')
-      .then(response => response.json())
-      .then(posts => {
-        const container = document.getElementById('posts-container');
-        posts.forEach(post => {
-          const article = document.createElement('article');
-          article.innerHTML = `
-            <h3><a href="${post.filename}">${post.title}</a></h3>
-            <p><em>Published: ${post.date}</em></p>
-            <p>${post.excerpt}</p>
-          `;
-          container.appendChild(article);
-        });
-      })
-      .catch(error => console.error('Error loading posts:', error));
-  </script>
+  <footer>© 2025 The Song Writer — David Linton-Halliday</footer>
 </body>
 </html>
