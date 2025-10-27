@@ -106,12 +106,20 @@
       <h2 style="text-align:center; color:var(--text);">Leave a Comment</h2>
       <p style="text-align:center; color:var(--muted);">Your thoughts mean a lot — share your feedback or ideas below.</p>
 
-      <form name="comments" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-            style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
-        <input type="hidden" name="form-name" value="comments">
-        <p style="display:none;">
-          <label>Don’t fill this out: <input name="bot-field"></label>
-        </p>
+    <form name="comments" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="comments">
+  <p style="display:none;">
+    <label>Don’t fill this out: <input name="bot-field"></label>
+  </p>
+
+  <input type="text" name="name" placeholder="David (optional)">
+  <input type="email" name="email" placeholder="davidlinton1@bigpond.com(optional)">
+  <textarea name="message" placeholder="Write your comment..." rows="5" required></textarea>
+
+  <button type="submit">Send Comment</button>
+</form>
+<div class="success" style="display:none;">✅ Thank you for your comment!</div>
+
 
         <input type="text" name="name" placeholder="Your name (optional)" 
                style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;">
