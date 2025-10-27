@@ -110,6 +110,25 @@
         </button>
       </form>
     </section>
+<!-- 💬 Comment Section -->
+<section style="margin-top:60px; background:var(--card); padding:40px; border-radius:var(--radius); box-shadow:var(--shadow);">
+  <h2 style="text-align:center; color:var(--text);">Leave a Comment</h2>
+  <p style="text-align:center; color:var(--muted);">Your thoughts mean a lot — share your feedback or ideas below.</p>
+
+  <form action="https://formspree.io/f/mdkpaoga" method="POST" style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+    <input type="text" name="name" placeholder="David (optional)" 
+           style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;">
+    <input type="email" name="email" placeholder="Your email (optional)" 
+           style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;">
+    <textarea name="message" placeholder="Write your comment..." rows="5" required
+           style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;resize:vertical;"></textarea>
+    <button type="submit" 
+            style="background:var(--accent);color:#000;border:none;padding:12px 20px;border-radius:8px;
+                   font-weight:700;cursor:pointer;transition:0.3s;">
+      Send Comment
+    </button>
+  </form>
+</section>
 
   </main>
 
