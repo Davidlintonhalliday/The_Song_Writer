@@ -3,107 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Song Writer</title>
-  <meta name="description" content="The Song Writer — musician, songwriter, podcaster." />
+  <title>The Song Writer — David Linton-Halliday</title>
+  <meta name="description" content="The Song Writer — songs, stories, and podcasts by David Linton-Halliday." />
+  <link rel="canonical" href="https://songwriters.space/" />
+  <meta property="og:title" content="The Song Writer — David Linton-Halliday" />
+  <meta property="og:description" content="Original songs, stories, and podcasts by David Linton-Halliday." />
+  <meta property="og:url" content="https://songwriters.space/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://songwriters.space/assets/cover.jpg" />
   <style>
     :root {
-      --bg:#0f1724; --card:#0b1220; --accent:#ffb703; --muted:#9aa4b2; --glass: rgba(255,255,255,0.03)
+      --bg1:#f0f4ff; --bg2:#dbe8ff; --card:#ffffff; --accent:#ffb703; --text:#1a1a1a; --muted:#444;
+      --radius:14px; --shadow:0 3px 18px rgba(0,0,0,0.1);
     }
-    * { box-sizing:border-box; }
+    *{box-sizing:border-box}
     body {
       margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-      line-height:1.5; background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover; color:#e6eef6;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      background-attachment:fixed;
+      line-height:1.6;
     }
-    .container { max-width:1100px; margin:0 auto; padding:28px; background:rgba(15,23,36,0.85); border-radius:14px; }
-    header { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
-    .brand { display:flex; gap:12px; align-items:center; }
-    .logo { width:52px; height:52px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#ff6b6b); display:flex; align-items:center; justify-content:center; font-weight:700; color:#071021; }
-    nav { display:flex; gap:18px; align-items:center; }
-    nav a { color:var(--muted); text-decoration:none; font-weight:600; }
-    .btn { background:var(--accent); color:#071021; padding:8px 14px; border-radius:10px; text-decoration:none; font-weight:700; }
-    .card { background:var(--card); padding:18px; border-radius:14px; box-shadow:0 6px 20px rgba(2,8,23,0.6); backdrop-filter: blur(6px); }
-    .song-grid { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:18px; }
-    .song-card { background:rgba(255,255,255,0.05); padding:12px; border-radius:10px; text-align:center; }
+    header {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:20px 8%; background:#ffffffcc; backdrop-filter:blur(6px);
+      position:sticky; top:0; z-index:10; box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+    .brand {display:flex; gap:12px; align-items:center;}
+    .logo {width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021;}
+    nav {display:flex;gap:18px;align-items:center;}
+    nav a {color:var(--text);text-decoration:none;font-weight:600;}
+    nav a:hover {color:#ff6b6b;}
+    .btn {background:var(--accent);color:#000;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:700;}
+    main {max-width:1000px;margin:0 auto;padding:40px 20px;}
+    section {background:var(--card);margin-top:22px;padding:26px;border-radius:var(--radius);box-shadow:var(--shadow);}
+    h1,h2,h3 {margin-top:0;}
+    .song-grid {display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:18px;}
+    .song-card {background:#f9f9f9;padding:14px;border-radius:10px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+    footer {
+      margin-top:40px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:var(--muted);
+      box-shadow:0 -2px 10px rgba(0,0,0,0.08);
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">TS</div>
-        <div>
-          <div style="font-weight:800">The Song Writer</div>
-          <div style="font-size:13px;color:var(--muted)">Musician • Songwriter • Podcaster</div>
+  <header>
+    <div class="brand">
+      <div class="logo">TS</div>
+      <div>
+        <div style="font-weight:800">The Song Writer</div>
+        <div style="font-size:13px;color:var(--muted)">Musician • Songwriter • Podcaster</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="stories.html">Stories</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a class="btn" href="#contact">Contact</a>
+  </header>
+
+  <main>
+    <section>
+      <h1>Welcome — I craft songs and stories from the heart.</h1>
+      <p>Explore my music, writing, and podcast creations. Each project tells a story and brings melodies to life.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Songwriting is my way of connecting with people, capturing emotions, and telling stories that resonate. I love blending melodies with words that leave a lasting impression.</p>
+    </section>
+
+    <section id="works">
+      <h2>Selected Works</h2>
+      <div class="song-grid">
+        <div class="song-card"><h4>Novel — <em>The Unfinished Chronicles</em></h4><p>Release info and updates soon.</p></div>
+        <div class="song-card"><h4>Novel — <em>Just Another Shitty Day In Paradise</em></h4><p>Chapters available on request.</p></div>
+        <div class="song-card"><h4>Podcast — <em>The Unexpected</em></h4><p>Latest episodes and show notes.</p></div>
+      </div>
+    </section>
+
+    <section id="songs">
+      <h2>My Songs</h2>
+      <div class="song-grid">
+        <div class="song-card">
+          <h3>Cajun Moon</h3>
+          <iframe width="300" height="170" src="https://www.youtube.com/embed/wrg6WWQPSHY?modestbranding=1" title="Cajun Moon" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="song-card">
+          <h3>Foxes at the Window</h3>
+          <iframe width="300" height="170" src="https://www.youtube.com/embed/ScMzIvxBSi4?modestbranding=1" title="Foxes at the Window" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#songs">My Songs</a>
-        <a href="#friends">Friends</a>
-        <a href="#contact">Contact</a>
-        <a href="newpage.html">More</a>
-      </nav>
-      <a class="btn" href="#contact">Contact Me</a>
-    </header>
+    </section>
 
-    <main>
-      <section class="card">
-        <h1>Welcome — I craft songs and stories from the heart.</h1>
-        <p>Explore my music, writing, and podcast creations. Each project tells a story and brings melodies to life.</p>
-      </section>
-
-      <section id="about" class="card" style="margin-top:18px">
-        <h2>About</h2>
-        <p style="color:var(--muted)">Songwriting is my way of connecting with people, capturing emotions, and telling stories that resonate. I love blending melodies with words that leave a lasting impression.</p>
-      </section>
-
-      <section id="works" class="card" style="margin-top:18px">
-        <h2>Selected Works</h2>
-        <div class="song-grid">
-          <div class="song-card"><h4>Novel - "The unfinished chronicles"</h4><p style="color:var(--muted);margin:6px 0">Release info, streaming links.</p></div>
-          <div class="song-card"><h4>Novel — "Just another Shitty Day In Paradise"</h4><p style="color:var(--muted);margin:6px 0">Progress: chapters available on request.</p></div>
-          <div class="song-card"><h4>Podcast — "The unexpected"</h4><p style="color:var(--muted);margin:6px 0">Latest episodes and show notes.</p></div>
+    <section id="friends">
+      <h2>Friends’ Channels</h2>
+      <div class="song-grid">
+        <div class="song-card">
+          <img src="https://yt3.googleusercontent.com/ytc/AIdro_lS4NMc5OYzMjViIoXGLmB2mQQoEbtHZ7WRzjNLD6aXHA=s176-c-k-c0x00ffffff-no-rj" alt="ZenBowls Channel" style="width:150px;height:150px;border-radius:12px;margin-bottom:10px;">
+          <h3>ZenBowls</h3>
+          <p>Relaxing vibes and soundscapes.</p>
+          <a href="https://www.youtube.com/@ZenBowls" target="_blank" class="btn">Visit Channel</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="songs" class="card" style="margin-top:18px">
-        <h2>My Songs</h2>
-        <div class="song-grid">
-          <div class="song-card">
-            <h3>Cajun Moon</h3>
-            <iframe width="300" height="170" src="https://www.youtube.com/embed/wrg6WWQPSHY?modestbranding=1" title="Cajun Moon" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="song-card">
-            <h3>Foxes at the Window</h3>
-            <iframe width="300" height="170" src="https://www.youtube.com/embed/ScMzIvxBSi4?modestbranding=1" title="Foxes at the Window" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:davidlintonhalliday@gmail.com">davidlintonhalliday@gmail.com</a></p>
+      <p>YouTube: <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank">Visit My Channel</a></p>
+    </section>
+  </main>
 
-      <section id="friends" class="card" style="margin-top:18px">
-        <h2>Friends’ Channels</h2>
-        <div class="song-grid">
-          <div class="song-card">
-            <img src="https://yt3.googleusercontent.com/ytc/AIdro_lS4NMc5OYzMjViIoXGLmB2mQQoEbtHZ7WRzjNLD6aXHA=s176-c-k-c0x00ffffff-no-rj" alt="ZenBowls Channel" style="width:150px;height:150px;border-radius:12px;margin-bottom:10px;">
-            <h3>ZenBowls</h3>
-            <p style="color:var(--muted);margin:6px 0;">Relaxing vibes and soundscapes.</p>
-            <a href="https://www.youtube.com/@ZenBowls" target="_blank" style="display:inline-block;background:var(--accent);color:#071021;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700;">Visit Channel</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="card" style="margin-top:18px">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:davidlintonhalliday@gmail.com" style="color:var(--accent);">davidlintonhalliday@gmail.com</a></p>
-        <p>YouTube: <a href="https://www.youtube.com/channel/UCyo8kGE2_sHoHtiWxmBZ3JQ" target="_blank" style="color:var(--accent);">Visit My Channel</a></p>
-      </section>
-    </main>
-
-    <footer style="margin-top:28px">
-      © 2025 The Song Writer — David Linton-Halliday
-    </footer>
-  </div>
+  <footer>
+    © 2025 The Song Writer — David Linton-Halliday · <a href="sitemap.xml">Sitemap</a> · <a href="feed.xml">RSS</a>
+  </footer>
 </body>
 </html>
