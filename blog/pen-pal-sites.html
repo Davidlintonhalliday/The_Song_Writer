@@ -106,22 +106,29 @@
       <h2 style="text-align:center; color:var(--text);">Leave a Comment</h2>
       <p style="text-align:center; color:var(--muted);">Your thoughts mean a lot — share your feedback or ideas below.</p>
 
-      <form id="commentForm" action="https://formspree.io/f/mdkpaoga" method="POST" style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+      <form name="comments" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+        <input type="hidden" name="form-name" value="comments">
+        <p style="display:none;">
+          <label>Don’t fill this out: <input name="bot-field"></label>
+        </p>
+
         <input type="text" name="name" placeholder="Your name (optional)" 
                style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;">
         <input type="email" name="email" placeholder="Your email (optional)" 
                style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;">
         <textarea name="message" placeholder="Write your comment..." rows="5" required
                style="padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;resize:vertical;"></textarea>
+
         <button type="submit" 
                 style="background:var(--accent);color:#000;border:none;padding:12px 20px;border-radius:8px;
                        font-weight:700;cursor:pointer;transition:0.3s;">
           Send Comment
         </button>
       </form>
+
       <div id="thankyou" class="success">✅ Thank you for your comment! It’s been sent successfully.</div>
     </section>
-
   </main>
 
   <footer>
@@ -133,25 +140,6 @@
         "Last updated: " + updated.toLocaleDateString("en-AU", {
           weekday: "short", year: "numeric", month: "long", day: "numeric"
         });
-
-      // Show "Thank you" message on successful submission
-      const form = document.getElementById('commentForm');
-      const thankyou = document.getElementById('thankyou');
-      form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          form.reset();
-          thankyou.style.display = 'block';
-        } else {
-          alert('There was a problem sending your comment. Please try again.');
-        }
-      });
     </script>
   </footer>
 
