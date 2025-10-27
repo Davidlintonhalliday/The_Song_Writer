@@ -121,8 +121,21 @@
     </section>
   </main>
 
-  <footer>
-    © 2025 The Song Writer — David Linton-Halliday · <a href="sitemap.xml">Sitemap</a> · <a href="feed.xml">RSS</a>
-  </footer>
+ <footer>
+  © 2025 The Song Writer — David Linton-Halliday<br>
+  <small id="last-updated" style="color:#555;"></small>
+  <script>
+    // Display the last modified date (auto updates after each deploy)
+    const updated = new Date(document.lastModified);
+    document.getElementById("last-updated").textContent =
+      "Last updated: " + updated.toLocaleDateString("en-AU", {
+        weekday: "short",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+  </script>
+</footer>
+
 </body>
 </html>
