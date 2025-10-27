@@ -1,21 +1,171 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Podcast — The Song Writer</title>
-<meta name="description" content="Listen to podcasts exploring creativity, music, and life stories.">
-<link rel="canonical" href="https://songwriters.space/podcast.html"></head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Podcast | The Song Writer — David Linton-Halliday</title>
+  <meta name="description" content="Upcoming podcast by David Linton-Halliday — exploring mental illness, creativity, music, and life in rural Australia." />
+  <link rel="canonical" href="https://songwriters.space/podcast.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Podcast | The Song Writer — David Linton-Halliday" />
+  <meta property="og:description" content="Conversations and stories about mental illness, music, and rural life by Australian songwriter David Linton-Halliday." />
+  <meta property="og:url" content="https://songwriters.space/podcast.html" />
+  <meta property="og:type" content="music.radioSeries" />
+  <meta property="og:image" content="https://songwriters.space/assets/cover.jpg" />
+
+  <style>
+    :root {
+      --bg1:#f0f4ff; --bg2:#dbe8ff; --card:#ffffff; --accent:#ffb703;
+      --text:#1a1a1a; --muted:#555; --radius:14px; --shadow:0 3px 18px rgba(0,0,0,0.08);
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      line-height:1.6;
+    }
+    header {
+      display:flex;align-items:center;justify-content:space-between;
+      padding:20px 8%;background:#ffffffcc;backdrop-filter:blur(6px);
+      position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+    .brand {display:flex;gap:12px;align-items:center;}
+    .logo {width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021;}
+    nav {display:flex;gap:18px;align-items:center;}
+    nav a {color:var(--text);text-decoration:none;font-weight:600;}
+    nav a:hover {color:#ff6b6b;}
+    .btn {background:var(--accent);color:#000;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:700;}
+    main {max-width:1000px;margin:0 auto;padding:40px 20px;}
+    section {background:var(--card);margin-top:22px;padding:26px;border-radius:var(--radius);box-shadow:var(--shadow);}
+    .topic-grid {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px;}
+    .topic-card {background:#f9f9f9;padding:20px;border-radius:10px;text-align:left;box-shadow:0 2px 6px rgba(0,0,0,0.08);max-width:440px;}
+    .topic-card h3 {margin-top:0;}
+    footer {
+      margin-top:60px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:var(--muted);
+      box-shadow:0 -2px 10px rgba(0,0,0,0.08);
+    }
+    input, textarea {
+      padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;width:100%;
+    }
+    button[type="submit"] {
+      background:var(--accent);color:#000;border:none;padding:12px 20px;border-radius:8px;
+      font-weight:700;cursor:pointer;transition:0.3s;
+    }
+    button[type="submit"]:hover {background:#ffd85c;}
+    .success {text-align:center;background:#e6ffed;border:1px solid #b2f5b2;color:#1a7f37;
+      padding:12px;border-radius:8px;margin-top:20px;display:none;font-weight:600;}
+  </style>
+</head>
+
 <body>
-  <!-- same header -->
+  <header>
+    <div class="brand">
+      <div class="logo">TS</div>
+      <div>
+        <div style="font-weight:800">The Song Writer</div>
+        <div style="font-size:13px;color:var(--muted)">Musician • Songwriter • Podcaster</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="stories.html">Stories</a>
+      <a href="podcast.html" style="color:#ff6b6b;">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <a class="btn" href="#feedback">Contact</a>
+  </header>
+
   <main>
     <section>
-      <h1>Podcast</h1>
-      <p>Conversations and reflections about songwriting, storytelling, and life in rural NSW.</p>
-      <h3>Latest Episode</h3>
-      <audio controls><source src="assets/podcast-episode-1.mp3" type="audio/mpeg"></audio>
-      <p><a class="btn" href="index.html">← Back to Home</a></p>
+      <h1>🎧 The Song Writer Podcast</h1>
+      <p>Launching soon from my home studio in Dubbo, NSW — where music, storytelling, and honest conversation meet.  
+      This podcast will explore life, creativity, and the human stories that connect us all.</p>
+    </section>
+
+    <section>
+      <h2>Planned Topics</h2>
+      <div class="topic-grid">
+        <div class="topic-card">
+          <h3>Mental Illness & Creativity</h3>
+          <p>Exploring how bipolar and other mental health challenges influence the creative process, and how music becomes a lifeline.</p>
+        </div>
+        <div class="topic-card">
+          <h3>Life in Rural NSW</h3>
+          <p>Conversations from small towns — the beauty, isolation, humour, and resilience of country life in New South Wales.</p>
+        </div>
+        <div class="topic-card">
+          <h3>Music & Healing</h3>
+          <p>Stories of how music heals, comforts, and unites — from hospital wards to back verandas under starlit skies.</p>
+        </div>
+        <div class="topic-card">
+          <h3>The Art of Songwriting</h3>
+          <p>Insights from years of writing songs that speak to love, struggle, and redemption — plus tips for new songwriters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Studio Notes</h2>
+      <p>The new studio setup is nearly ready!  
+      Once recording begins, episodes will appear here and on <a href="music.html">YouTube</a> and <a href="blog.html">Spotify</a>.  
+      Stay tuned for updates on the first episode release.</p>
+    </section>
+
+    <!-- 🎙️ Feedback Form -->
+    <section id="feedback">
+      <h2>Send Feedback about My Podcast</h2>
+      <p>Have a topic suggestion or story idea for an upcoming episode?  
+      Share it below — your voice helps shape the show.</p>
+
+      <form id="podcastFeedback" action="https://formspree.io/f/mdkpaoga" method="POST" style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" placeholder="Your name (optional)">
+        <input type="email" name="email" placeholder="Your email (optional)">
+        <textarea name="message" rows="5" placeholder="Your message or topic suggestion..." required></textarea>
+        <button type="submit">Send Feedback</button>
+      </form>
+      <div id="thankyou" class="success">✅ Thank you! Your idea has been received.</div>
+
+      <script>
+        const form = document.getElementById('podcastFeedback');
+        const thankyou = document.getElementById('thankyou');
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            form.reset();
+            thankyou.style.display = 'block';
+          } else {
+            alert('There was a problem sending your message. Please try again.');
+          }
+        });
+      </script>
     </section>
   </main>
-  <footer>© 2025 The Song Writer — David Linton-Halliday</footer>
+
+  <footer>
+    © 2025 The Song Writer — David Linton-Halliday<br>
+    <small id="last-updated" style="color:#555;"></small>
+    <script>
+      const updated = new Date(document.lastModified);
+      document.getElementById("last-updated").textContent =
+        "Last updated: " + updated.toLocaleDateString("en-AU", {
+          weekday: "short", year: "numeric", month: "long", day: "numeric"
+        });
+    </script>
+  </footer>
 </body>
 </html>
-
