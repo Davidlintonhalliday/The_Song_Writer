@@ -66,6 +66,37 @@
       margin-top:40px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:var(--muted);
       box-shadow:0 -2px 10px rgba(0,0,0,0.08);
     }
+
+    /* Parallax Section */
+    .parallax {
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 60vh;
+      border-radius: 16px;
+      margin: 40px 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .parallax-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      opacity: 0;
+      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+      transform: translate(-50%, -40%);
+    }
+
+    .parallax.visible .parallax-overlay {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
   </style>
 </head>
 
@@ -134,6 +165,15 @@
       </div>
     </section>
 
+    <!-- ✨ New Parallax Section with Fade-in Overlay -->
+    <div class="parallax" style="background-image:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80');">
+      <div class="parallax-overlay">
+        <h2 style="font-size:2.2em; text-shadow:0 3px 10px rgba(0,0,0,0.6);">
+          “Music tells the story words cannot.”
+        </h2>
+      </div>
+    </div>
+
     <section id="friends">
       <h2>Friends’ Channels</h2>
       <div class="song-grid">
@@ -166,5 +206,21 @@
         });
     </script>
   </footer>
+
+  <!-- 🎬 Parallax Fade Script -->
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.parallax').forEach(el => {
+        const speed = 0.4;
+        const yOffset = window.scrollY * speed;
+        el.style.backgroundPosition = `center ${-yOffset}px`;
+
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
