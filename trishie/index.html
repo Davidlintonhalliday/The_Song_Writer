@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trishie’s Corner — The Song Writer</title>
+  <meta name="description" content="Stories, memories, and photos from Trishie’s life back in Queensland — colourful, heartfelt, and full of warmth." />
+  <link rel="canonical" href="https://songwriters.space/trishie/index.html" />
+  <meta property="og:title" content="Trishie’s Corner — The Song Writer" />
+  <meta property="og:description" content="Stories and reflections from Trishie’s life back in Queensland." />
+  <meta property="og:image" content="https://songwriters.space/assets/cover.jpg" />
+
+  <style>
+    :root {
+      --bg1:#fff8f0; --bg2:#fde4d9; --card:#ffffff; --accent:#ffb703;
+      --text:#1a1a1a; --muted:#555; --radius:14px; --shadow:0 3px 18px rgba(0,0,0,0.08);
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      line-height:1.6;
+    }
+    header {
+      display:flex;align-items:center;justify-content:space-between;
+      padding:20px 8%;background:#ffffffcc;backdrop-filter:blur(6px);
+      position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+    .brand {display:flex;gap:12px;align-items:center;}
+    .logo {width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#071021;}
+    nav {display:flex;gap:18px;align-items:center;}
+    nav a {color:var(--text);text-decoration:none;font-weight:600;}
+    nav a:hover {color:#ff6b6b;}
+    .btn {background:var(--accent);color:#000;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:700;}
+    main {max-width:1000px;margin:0 auto;padding:40px 20px;}
+    section {background:var(--card);margin-top:22px;padding:26px;border-radius:var(--radius);box-shadow:var(--shadow);}
+    .story-grid {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px;}
+    .story-card {background:#f9f9f9;padding:20px;border-radius:10px;text-align:left;box-shadow:0 2px 6px rgba(0,0,0,0.08);max-width:440px;}
+    .story-card img {width:100%;border-radius:10px;margin-bottom:10px;}
+    .story-card h3 {margin-top:0;}
+    footer {
+      margin-top:60px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:var(--muted);
+      box-shadow:0 -2px 10px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">TS</div>
+      <div>
+        <div style="font-weight:800">The Song Writer</div>
+        <div style="font-size:13px;color:var(--muted)">Musician • Songwriter • Podcaster</div>
+      </div>
+    </div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../music.html">Music</a>
+      <a href="../stories.html">Stories</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../trishie/index.html" style="color:#ff6b6b;">Trishie’s Corner</a>
+      <a href="../about.html">About</a>
+    </nav>
+    <a class="btn" href="../stories.html#feedback">Contact</a>
+  </header>
+
+  <main>
+    <section>
+      <h1>🌸 Trishie’s Corner</h1>
+      <p>Stories, memories, and reflections from my life back in Queensland —  
+      where the skies were bigger, the colours brighter, and every photo has a story to tell.  
+      Here’s a little window into the world I grew up in.</p>
+    </section>
+
+    <section>
+      <h2>Featured Stories</h2>
+      <div class="story-grid">
+        <div class="story-card">
+          <img src="images/trishie-beach.jpg" alt="Beach day in Queensland">
+          <h3>Growing Up by the Coast</h3>
+          <p>Childhood memories of sand, storms, and sunsets — a love letter to the coast where it all began.</p>
+          <a href="story1.html" class="btn">Read More</a>
+        </div>
+
+        <div class="story-card">
+          <img src="images/queensland-garden.jpg" alt="Tropical garden">
+          <h3>My Mother’s Garden</h3>
+          <p>The scent of frangipani, old stories, and lessons that still bloom decades later.</p>
+          <a href="story2.html" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <p>A few colourful moments from home — Queensland light, laughter, and life in full bloom.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;">
+        <img src="images/trishie-sunset.jpg" alt="Queensland sunset" style="width:300px;border-radius:10px;">
+        <img src="images/trishie-house.jpg" alt="Family home" style="width:300px;border-radius:10px;">
+        <img src="images/trishie-picnic.jpg" alt="Picnic by the river" style="width:300px;border-radius:10px;">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 The Song Writer — David & Trishie Linton-Halliday<br>
+    <small id="last-updated" style="color:#555;"></small>
+    <script>
+      const updated = new Date(document.lastModified);
+      document.getElementById("last-updated").textContent =
+        "Last updated: " + updated.toLocaleDateString("en-AU", {
+          weekday: "short", year: "numeric", month: "long", day: "numeric"
+        });
+    </script>
+  </footer>
+</body>
+</html>
