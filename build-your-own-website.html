@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How I Built My Website for Pocket Change — David Linton-Halliday</title>
+  <meta name="description" content="A personal story and guide by David Linton-Halliday on how to build a clean, functional website using free tools, HTML, and creativity." />
+  <style>
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      line-height: 1.7;
+      background: #fafafa;
+      color: #1a1a1a;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      color: #111;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    pre {
+      background: #f9f9f9;
+      border-left: 4px solid #ffb703;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+    a {
+      color: #ff6b6b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 16px;
+      background: #ffb703;
+      color: #000;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>How I Built My Website for Pocket Change</h1>
+  <p>When I first decided to make a home for my songs, stories, and podcasts online, I looked at what professional web developers charged — and nearly fell off my chair. So, I did what any musician with too much curiosity and not enough cash would do: I taught myself HTML and built it from scratch.</p>
+
+  <p>I didn’t use WordPress, Wix, or drag-and-drop templates. Every corner of this site was hand-coded by me — line by line — with a few cups of coffee and a lot of patience. The result isn’t just a website; it’s proof that anyone can build something beautiful and functional on a shoestring budget.</p>
+
+  <h2>💡 Why I Did It Myself</h2>
+  <p>When you build your own site, you understand how it works. You’re not locked into anyone’s subscription or advertising. If something breaks, you can fix it. And the satisfaction that comes from writing a bit of code and seeing it come to life is like writing your first song — rough around the edges, but entirely yours.</p>
+
+  <h2>🧱 Step-by-Step: My Low-Cost Website Build</h2>
+
+  <h3>1. Start with a single HTML file</h3>
+  <p>I opened Notepad and typed this simple page:</p>
+
+  <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p>Save it as <code>index.html</code>, double-click it, and your browser will display it instantly. That’s your first web page. No plugins, no frameworks — just plain, honest code.</p>
+
+  <h3>2. Add some personality with CSS</h3>
+  <p>CSS is where your design comes alive. I created my site’s soft backgrounds, buttons, and layouts with just a few dozen lines of style rules.</p>
+
+  <pre><code>body {
+  background: linear-gradient(180deg, #f0f4ff, #dbe8ff);
+  font-family: Inter, sans-serif;
+  color: #1a1a1a;
+}
+.btn {
+  background: #ffb703;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+</code></pre>
+
+  <p>The beauty of CSS is how little you need to make something look polished. I reused the same button and card design throughout my site — consistent, simple, and fast-loading.</p>
+
+  <h3>3. Free Hosting on Netlify</h3>
+  <p>I chose <a href="https://www.netlify.com/">Netlify</a> because it’s reliable, fast, and — best of all — free for static sites like mine. You can just drag and drop your project folder onto their dashboard, or link a GitHub repository and hit “Deploy.”</p>
+
+  <p>In less than five minutes, my site was live at:</p>
+  <blockquote><a href="https://songwriters.space/">https://songwriters.space</a></blockquote>
+
+  <p>No monthly costs. No hidden ads. Just your site on your terms.</p>
+
+  <h3>4. Domain and Forms on a Budget</h3>
+  <ul>
+    <li>I bought my domain <em>songwriters.space</em> directly through Netlify — a one-time, low-cost purchase.</li>
+    <li>For contact forms, I use <a href="https://formspree.io/">Formspree</a> — no servers, no coding headaches, and it delivers messages straight to my email.</li>
+  </ul>
+
+  <h3>5. The HTML Knowledge I Gained</h3>
+  <p>Writing every page by hand forced me to understand how a website really works. I learned about:</p>
+  <ul>
+    <li><strong>Semantic HTML</strong> — using tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to structure content properly.</li>
+    <li><strong>Meta tags</strong> — the little details that help Google and social media display your site cleanly.</li>
+    <li><strong>Accessibility</strong> — how to make sure everyone can read and navigate your pages.</li>
+    <li><strong>Deploying updates</strong> — each time I edit, I just drag my new file onto Netlify, and the whole site updates in seconds.</li>
+  </ul>
+
+  <h3>6. Helping Others Do the Same</h3>
+  <p>If I can do it, anyone can. You don’t need to be a programmer — just patient and curious. Here’s the roadmap I’d give to anyone starting today:</p>
+  <ol>
+    <li>Create a folder and make your first <code>index.html</code> file.</li>
+    <li>Use a free text editor like <strong>VS Code</strong>.</li>
+    <li>Add a few basic CSS rules to give your page some personality.</li>
+    <li>Test locally in your browser until it looks right.</li>
+    <li>Host it for free on Netlify, GitHub Pages, or Vercel.</li>
+    <li>Keep improving — one page at a time.</li>
+  </ol>
+
+  <h2>🎸 What I Learned Along the Way</h2>
+  <p>Building this site reminded me of writing music — you don’t need a million-dollar studio to make something honest. You just need a clear idea and the persistence to see it through.</p>
+  <p>HTML is like songwriting: you start with structure, then add rhythm and tone. CSS is the harmony. And the result — if you’re patient — feels alive.</p>
+
+  <p>I keep the costs low, the pages light, and the creativity high. Every pixel here tells a bit of my story — the musician who learned to code so he could share his world without breaking the bank.</p>
+
+  <p><a href="index.html" class="btn">← Back to Home</a></p>
+</body>
+</html>
