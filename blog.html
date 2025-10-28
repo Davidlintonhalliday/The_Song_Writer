@@ -3,24 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog | The Song Writer — David Linton-Halliday</title>
-  <meta name="description" content="Blog articles, reflections, and creative insights by Australian songwriter and storyteller David Linton-Halliday." />
-  <link rel="canonical" href="https://songwriters.space/blog.html" />
-  <meta property="og:title" content="Blog | The Song Writer — David Linton-Halliday" />
-  <meta property="og:description" content="Insights and personal reflections from David Linton-Halliday — songwriter, storyteller, and creative soul." />
-  <meta property="og:image" content="https://songwriters.space/assets/cover.jpg" />
+  <title>How I Built My Website for Pocket Change — The Song Writer</title>
+  <meta name="description" content="How I built my personal website using simple HTML, free tools, and creative persistence — by David Linton-Halliday." />
+  <link rel="canonical" href="https://songwriters.space/blog/how-i-built-my-website.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="How I Built My Website for Pocket Change — The Song Writer" />
+  <meta property="og:description" content="A practical guide to building a clean, personal website on a shoestring — by Australian songwriter and storyteller David Linton-Halliday." />
+  <meta property="og:url" content="https://songwriters.space/blog/how-i-built-my-website.html" />
+  <meta property="og:image" content="https://songwriters.space/assets/build-website-banner-color.jpg" />
+
   <style>
     :root {
       --bg1:#f0f4ff; --bg2:#dbe8ff; --card:#ffffff; --accent:#ffb703;
       --text:#1a1a1a; --muted:#555; --radius:14px; --shadow:0 3px 18px rgba(0,0,0,0.08);
     }
-    * {box-sizing:border-box;}
     body {
       margin:0;
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
       color:var(--text);
       background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      line-height:1.6;
+      line-height:1.7;
     }
     header {
       display:flex;align-items:center;justify-content:space-between;
@@ -38,14 +41,12 @@
     nav a {color:var(--text);text-decoration:none;font-weight:600;}
     nav a:hover {color:#ff6b6b;}
     .btn {background:var(--accent);color:#000;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:700;}
-    main {max-width:1000px;margin:0 auto;padding:40px 20px;}
-    section {background:var(--card);margin-top:22px;padding:26px;border-radius:var(--radius);box-shadow:var(--shadow);}
-    .blog-grid {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px;}
-    .blog-card {background:#f9f9f9;padding:20px;border-radius:10px;text-align:left;box-shadow:0 2px 6px rgba(0,0,0,0.08);max-width:440px;}
-    .blog-card img {width:100%;border-radius:8px;margin-bottom:10px;}
-    .blog-card h3 {margin-top:0;}
-    .blog-card a {text-decoration:none;color:#111;}
-    .blog-card a:hover {color:#ff6b6b;}
+    main {max-width:900px;margin:0 auto;padding:40px 20px;}
+    article {background:var(--card);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);}
+    h1, h2 {color:#111;}
+    h1 {margin-top:0;font-size:2em;text-align:center;}
+    h2 {margin-top:40px;color:#222;}
+    p {margin-bottom:1em;}
     footer {
       margin-top:60px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:var(--muted);
       box-shadow:0 -2px 10px rgba(0,0,0,0.08);
@@ -63,49 +64,68 @@
       </div>
     </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="stories.html">Stories</a>
-      <a href="podcast.html">Podcast</a>
-      <a href="about.html">About</a>
-      <a href="community.html">Community</a>
-      <a href="shop.html">Shop</a>
-      <a href="blog.html" style="color:#ff6b6b;">Blog</a>
-      <a href="build-your-own-website.html">Web Guide</a>
+      <a href="../index.html">Home</a>
+      <a href="../music.html">Music</a>
+      <a href="../stories.html">Stories</a>
+      <a href="../podcast.html">Podcast</a>
+      <a href="../about.html">About</a>
+      <a href="../community.html">Community</a>
+      <a href="../shop.html">Shop</a>
+      <a href="../blog.html" style="color:#ff6b6b;">Blog</a>
     </nav>
-    <a class="btn" href="#feedback">Contact</a>
+    <a class="btn" href="../stories.html#feedback">Contact</a>
   </header>
 
   <main>
-    <section>
-      <h1>📰 The Song Writer Blog</h1>
-      <p>Reflections, insights, and behind-the-scenes thoughts from my world of songwriting, storytelling, and creative life.  
-      Some are technical, others personal — all written from experience.</p>
-    </section>
+    <article>
+      <h1>How I Built My Website for Pocket Change</h1>
 
-    <section>
-      <h2>Latest Posts</h2>
-      <div class="blog-grid">
-        <!-- New blog post: How I Built My Website -->
-        <div class="blog-card">
-          <img src="assets/build-website-thumb.jpg" alt="How I Built My Website for Pocket Change">
-          <h3><a href="blog/how-i-built-my-website.html">How I Built My Website for Pocket Change</a></h3>
-          <p>How I built <em>The Song Writer</em> website using free tools, HTML, and stubborn curiosity.  
-          A simple, step-by-step guide for creatives who want control without the cost.</p>
-          <a href="blog/how-i-built-my-website.html" class="btn" style="margin-top:10px;">Read More</a>
-        </div>
+      <img src="../assets/build-website-banner-color.jpg"
+           alt="How I Built My Website for Pocket Change"
+           style="width:100%;max-width:800px;border-radius:12px;
+                  display:block;margin:20px auto 40px auto;
+                  box-shadow:0 4px 18px rgba(0,0,0,0.15);">
 
-        <!-- Example of other blog posts -->
-        <div class="blog-card">
-          <img src="assets/cover.jpg" alt="Why People Still Use Pen Pal Sites">
-          <h3><a href="blog/pen-pal-sites.html">Why People Still Use Pen Pal Sites</a></h3>
-          <p>A reflective look at why pen pal sites remain a meaningful way to connect in the digital age.</p>
-          <a href="blog/pen-pal-sites.html" class="btn" style="margin-top:10px;">Read More</a>
-        </div>
+      <p>Building <em>The Song Writer</em> website wasn’t about showing off tech skills — it was about proving you don’t need a big budget or a team of designers to create something beautiful and personal.  
+      I wanted a space that felt like a handmade studio notebook, where I could post songs, stories, and the odd rant about creative life in rural New South Wales.</p>
 
-        <!-- More blog posts can be added below in the same format -->
-      </div>
-    </section>
+      <h2>Starting from Scratch (and Curiosity)</h2>
+      <p>I began with nothing but a blank page and the idea that I could learn as I went.  
+      I opened a simple text editor and started typing HTML. No builders, no paid themes — just learning by doing.  
+      The more I wrote, the more I realized it’s like songwriting: one verse (or line of code) at a time.</p>
+
+      <h2>Free Tools and Hosting</h2>
+      <p>I used <strong>Netlify</strong> for free hosting and <strong>GitHub</strong> to store my files.  
+      Both are reliable, and once connected, updates are as easy as saving a file and letting the system redeploy.  
+      No ads, no hidden charges — just clean hosting that gives me full control over my site’s look and feel.</p>
+
+      <h2>Learning the Basics of HTML & CSS</h2>
+      <p>HTML defines structure — your bones. CSS defines style — your soul.  
+      Once I understood that, everything clicked. I learned how to set margins, colors, and shadows so my pages felt alive.  
+      Every update was another brushstroke in what became a digital self-portrait of my creative world.</p>
+
+      <h2>Designing for Connection, Not Perfection</h2>
+      <p>Many websites try too hard to impress. I wanted mine to feel warm and human.  
+      The fonts are clean, the colors soft, and the layout works well on mobile.  
+      It’s a space where people can listen to songs, read stories, and send feedback directly to me through Formspree — no logins or spam.</p>
+
+      <h2>Keeping It Simple (and Cheap)</h2>
+      <p>My total cost? Practically zero.  
+      - Domain name: about $20 a year.  
+      - Hosting: free with Netlify.  
+      - Design: done with heart and patience.  
+      And that’s the beauty of it — when you build your own site, you own it, you understand it, and you can change it anytime without paying anyone.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Every creative person deserves their own corner of the internet.  
+      Whether you write, sing, paint, or rant — build a place that’s yours.  
+      Don’t wait for permission or a perfect plan. Just start typing, save often, and hit publish.  
+      The rest will come naturally.</p>
+
+      <p style="margin-top:40px;text-align:center;font-style:italic;color:#444;">
+        Built with HTML, coffee, and a stubborn refusal to give up.
+      </p>
+    </article>
   </main>
 
   <footer>
