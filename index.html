@@ -68,40 +68,29 @@
     }
 
     /* Parallax Section */
-    .parallax {
-      position: relative;
-      background-image:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80');
-      background-position:center;
-      background-repeat:no-repeat;
-      background-size:cover;
-      height:60vh;
-      border-radius:16px;
-      margin:40px 0;
-      box-shadow:0 8px 24px rgba(0,0,0,0.2);
-      overflow:hidden;
-    }
+ <!-- ✨ Parallax Section (Desktop + Mobile Enhanced) -->
+<div class="parallax">
+  <div class="parallax-overlay">
+    <h2 style="font-size:2.2em; text-shadow:0 3px 10px rgba(0,0,0,0.6);">
+      “Music tells the story words cannot.”
+    </h2>
+  </div>
+</div>
 
-    @media (min-width: 768px) {
-      .parallax { background-attachment: fixed; }
-    }
+<style>
+/* Keep your existing parallax styles, then add these: */
+@media (max-width: 767px) {
+  .parallax {
+    background-attachment: scroll !important;
+    animation: fadeInMobile 3s ease-out forwards;
+  }
+  @keyframes fadeInMobile {
+    0% {opacity: 0; transform: scale(1.05);}
+    100% {opacity: 1; transform: scale(1);}
+  }
+}
+</style>
 
-    .parallax-overlay {
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%, -50%);
-      text-align:center;
-      color:white;
-      opacity:0;
-      transition:opacity 1.5s ease-out, transform 1.5s ease-out;
-      transform:translate(-50%, -40%);
-    }
-
-    .parallax.visible .parallax-overlay {
-      opacity:1;
-      transform:translate(-50%, -50%);
-    }
-  </style>
 </head>
 
 <body>
