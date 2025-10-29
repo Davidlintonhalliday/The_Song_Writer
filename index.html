@@ -189,15 +189,26 @@
   </main>
 
   <footer>
-   <footer style="margin-top:40px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:#444;box-shadow:0 -2px 10px rgba(0,0,0,0.08);border-top:2px solid #ffb703;">
-  © 2025 The Song Writer — David Linton-Halliday<br>
-  <small id="last-updated" style="color:#555;"></small><br>
-
-  <!-- 🌐 Global Visitor Counter Badge -->
+  <footer style="margin-top:40px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:#444;box-shadow:0 -2px 10px rgba(0,0,0,0.08);border-top:2px solid #ffb703;">
+  © 2025 The Song Writer — David & Trishie Linton-Halliday<br>
+  <small id="visitor-text" style="color:#444;display:block;margin-top:6px;">Visitors: loading...</small>
   <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsongwriters.space&count_bg=%23FFB703&title_bg=%231A1A1A&icon=music.svg&icon_color=%23FFB703&title=Visitors&edge_flat=false"
-       alt="Visitor Counter" style="margin-top:10px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+       alt="Visitor Counter" style="margin-top:10px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);"><br>
+  <small id="last-updated" style="color:#555;"></small>
 
   <script>
+    // 🔢 Fetch live visitor count as JSON
+    fetch("https://hits.seeyoufarm.com/api/count/visits?url=https%3A%2F%2Fsongwriters.space")
+      .then(response => response.json())
+      .then(data => {
+        const visitorText = document.getElementById("visitor-text");
+        visitorText.textContent = "Visitors: " + data.value.toLocaleString();
+      })
+      .catch(() => {
+        document.getElementById("visitor-text").textContent = "Visitors: unavailable";
+      });
+
+    // 🕓 Display last updated date
     const updated = new Date(document.lastModified);
     document.getElementById("last-updated").textContent =
       "Last updated: " + updated.toLocaleDateString("en-AU", {
