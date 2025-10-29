@@ -189,16 +189,29 @@
   </main>
 
   <footer>
- <footer style="margin-top:40px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:#444;box-shadow:0 -2px 10px rgba(0,0,0,0.08);border-top:2px solid #ffb703;">
+<footer style="margin-top:40px;padding:20px;background:#ffffffcc;text-align:center;font-size:14px;color:#444;box-shadow:0 -2px 10px rgba(0,0,0,0.08);border-top:2px solid #ffb703;">
   © 2025 The Song Writer — David & Trishie Linton-Halliday<br>
-  <div style="margin-top:8px;">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsongwriters.space&count_bg=%23FFB703&title_bg=%231A1A1A&icon=music&icon_color=%23FFB703&title=Visitors&edge_flat=false"
-         alt="Visitor Counter" style="border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);height:28px;">
+  <div id="visitor-wrapper" style="margin-top:10px;">
+    <span id="visitor-text" style="font-weight:600;color:#1a1a1a;">Visitors: Loading...</span>
   </div>
   <small id="last-updated" style="color:#555;display:block;margin-top:6px;"></small>
 
   <script>
-    // Show the last updated date
+    // ✅ Try to load the counter image dynamically to avoid browser blocking
+    const img = new Image();
+    img.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsongwriters.space&count_bg=%23FFB703&title_bg=%231A1A1A&icon=music.svg&icon_color=%23FFB703&title=Visitors&edge_flat=false";
+    img.alt = "Visitor Counter";
+    img.style.cssText = "height:28px;margin-top:6px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);display:block;margin:auto;";
+
+    img.onload = () => {
+      document.getElementById('visitor-wrapper').appendChild(img);
+      document.getElementById('visitor-text').textContent = "Visitors:";
+    };
+    img.onerror = () => {
+      document.getElementById('visitor-text').textContent = "Visitor count unavailable (blocked by browser)";
+    };
+
+    // 🕓 Last updated
     const updated = new Date(document.lastModified);
     document.getElementById("last-updated").textContent =
       "Last updated: " + updated.toLocaleDateString("en-AU", {
@@ -206,6 +219,7 @@
       });
   </script>
 </footer>
+
 
 
 
